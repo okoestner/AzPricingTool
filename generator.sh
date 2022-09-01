@@ -36,7 +36,7 @@ echo "------------------------------------------------------------------------"
 cd $installation_dir
 
 git pull
-echo "UPDATING CODE FROM REPO"
+echo "UPDATING CODE FROM OLAF REPO"
 
 python3 $installation_dir"xls_generator.py" $excel_file_of_today 
 
