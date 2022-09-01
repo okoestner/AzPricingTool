@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 import datetime
-import xlswriter
+import xlsxwriter
 import sys
-import os
+# import os
 
 from xlsStructure import xlsStructure as xls
 import priceReaderCompute
@@ -31,7 +31,6 @@ if len(sys.argv) > 2:
 	installation_dir=sys.argv[2] 
 
 print ("XLS-File: " + workbookFile)
-exit(1)
 
 #KEY CELLS
 perfGainValueCell=xls.getAssumptionValueCell('PERF')
@@ -81,16 +80,16 @@ numStandardDiskSKUs = len(standardDiskPriceMatrix)
 
 #3 - CHECK EVERYTHING IS OK
 if numVmSizes < numVmSizesCheck:
-	logger("Issue with number of VMs read: " +str(numVmSizes))
+	# logger("Issue with number of VMs read: " +str(numVmSizes))
 	sys.exit(1)
 if numSiteRecoverySKUs < numASRSkusCheck:
-	logger("Issue with number of ASR SKUs read: " +str(numSiteRecoverySKUs))
+	# logger("Issue with number of ASR SKUs read: " +str(numSiteRecoverySKUs))
 	sys.exit(1)
 if numPremiumDiskSKUs  < numPremDisksCheck:
-	logger("Issue with number of Premium Disks read: " +str(numPremiumDiskSKUs))
+	# logger("Issue with number of Premium Disks read: " +str(numPremiumDiskSKUs))
 	sys.exit(1)
 if numStandardDiskSKUs < numStanDisksCheck:
-	logger("Issue with number of Standard Disks read: " +str(numStandardDiskSKUs))
+	# logger("Issue with number of Standard Disks read: " +str(numStandardDiskSKUs))
 	sys.exit(1)
 
 #2 - CREATE WORKBOOKS
