@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import datetime
-import xlsxwriter
+import xlswriter
 import sys
 import os
 
@@ -12,7 +12,8 @@ import priceReaderSiteRecovery
 
 workbookNamePattern = '/mnt/c/Users/segonza/Desktop/Azure-Quote-Tool-{}.xlsx'
 installation_dir = '/home/sergio/azure-pricer/' 
-regions=['germany-north', 'germany-west-central', 'south-africa-north', 'south-africa-west', 'switzerland-north', 'switzerland-west', 'uae-central', 'uae-north', 'asia-pacific-east', 'asia-pacific-southeast', 'australia-central', 'australia-central-2', 'australia-east','australia-southeast', 'brazil-south', 'canada-central', 'canada-east', 'central-india', 'europe-north', 'europe-west', 'france-central', 'france-south', 'germany-central', 'germany-northeast', 'japan-east', 'japan-west', 'korea-central', 'korea-south', 'south-india', 'united-kingdom-south', 'united-kingdom-west', 'us-central', 'us-east', 'us-east-2', 'usgov-arizona', 'usgov-iowa', 'usgov-texas', 'usgov-virginia', 'us-north-central', 'us-south-central', 'us-west', 'us-west-2', 'us-west-central', 'west-india', 'norway-east', 'norway-west']
+# regions=['germany-north', 'germany-west-central', 'south-africa-north', 'south-africa-west', 'switzerland-north', 'switzerland-west', 'uae-central', 'uae-north', 'asia-pacific-east', 'asia-pacific-southeast', 'australia-central', 'australia-central-2', 'australia-east','australia-southeast', 'brazil-south', 'canada-central', 'canada-east', 'central-india', 'europe-north', 'europe-west', 'france-central', 'france-south', 'germany-central', 'germany-northeast', 'japan-east', 'japan-west', 'korea-central', 'korea-south', 'south-india', 'united-kingdom-south', 'united-kingdom-west', 'us-central', 'us-east', 'us-east-2', 'usgov-arizona', 'usgov-iowa', 'usgov-texas', 'usgov-virginia', 'us-north-central', 'us-south-central', 'us-west', 'us-west-2', 'us-west-central', 'west-india', 'norway-east', 'norway-west']
+regions=['germany-north', 'germany-west-central', 'switzerland-north', 'switzerland-west', 'europe-north', 'europe-west', 'germany-central', 'germany-northeast', 'united-kingdom-south', 'united-kingdom-west']
 
 regions.sort()
 
@@ -28,7 +29,10 @@ if len(sys.argv) > 1:
 	workbookFile=sys.argv[1]
 if len(sys.argv) > 2:
 	installation_dir=sys.argv[2] 
-	
+
+print ("XLS-File: " + workbookFile)
+exit(1)
+
 #KEY CELLS
 perfGainValueCell=xls.getAssumptionValueCell('PERF')
 modeCell=xls.getAssumptionValueCell('MODE')

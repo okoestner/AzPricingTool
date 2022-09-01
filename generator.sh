@@ -38,10 +38,10 @@ cd $installation_dir
 git pull
 echo "UPDATING CODE FROM REPO"
 
+python3 $installation_dir"xls_generator.py" $excel_file_of_today 
+
 exit 0
 
-
-python3 $installation_dir"xls_generator.py" $excel_file_of_today 
 
 find $excel_file_of_today
 
