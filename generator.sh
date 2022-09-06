@@ -40,9 +40,6 @@ echo "UPDATING CODE FROM REPO"
 
 python3 $installation_dir"xls_generator.py" $excel_file_of_today 
 
-exit 0
-
-
 find $excel_file_of_today
 
 if [ $? -ne 0 ]
