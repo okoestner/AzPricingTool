@@ -50,3 +50,13 @@ It works for Excel 2016 and beyond
 - Outgoing bandwidth costs
 - VM Backups
 - Cost for services other than compute, managed disks and ASR
+
+# Docker
+
+Erstellen des Image: 
+
+    docker build -t okoestner/azpricer .
+
+Starten des Containers:
+
+    docker run -v /mnt/c/Users/olafk/source/repos/AzPricingTool/html:/usr/share/nginx/html -p 8080:80 okoestner/azpricer

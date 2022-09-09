@@ -27,6 +27,8 @@ regions.sort()
 
 
 # set the currency we need the data in
+# currency codes can be found at:
+# https://docs.microsoft.com/de-de/rest/api/cost-management/retail-prices/azure-retail-prices
 currency = 'eur'
 
 # the following values might need to be updated in case you change regions array
